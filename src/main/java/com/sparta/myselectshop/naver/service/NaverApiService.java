@@ -19,7 +19,6 @@ import java.util.List;
 @Slf4j(topic = "NAVER API")
 @Service
 public class NaverApiService {
-
     private final RestTemplate restTemplate;
 
     public NaverApiService(RestTemplateBuilder builder) {
