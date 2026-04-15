@@ -35,7 +35,7 @@ public class NaverApiService {
                 .encode()
                 .build()
                 .toUri();
-        log.info("uri = " + uri);
+        log.info("uri = {}", uri);
 
         RequestEntity<Void> requestEntity = RequestEntity
                 .get(uri)
@@ -45,7 +45,7 @@ public class NaverApiService {
 
         ResponseEntity<String> responseEntity = restTemplate.exchange(requestEntity, String.class);
 
-        log.info("NAVER API Status Code : " + responseEntity.getStatusCode());
+        log.info("NAVER API Status Code : {}", responseEntity.getStatusCode());
 
         return fromJSONtoItems(responseEntity.getBody());
     }

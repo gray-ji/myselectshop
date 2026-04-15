@@ -42,7 +42,7 @@ public class Scheduler {
                 try {
                     productService.updateBySearch(id, itemDto);
                 } catch (Exception e) {
-                    log.error(id + " : " + e.getMessage());
+                    log.error("{} : {}", id, e.getMessage());
                 }
             }
         }
